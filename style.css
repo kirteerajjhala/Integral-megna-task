@@ -1,0 +1,362 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#273440 ;
+}
+
+.frame{
+    max-width: 1350px;
+    margin: 0 auto;
+    background-color: #f9f3ee;
+}
+
+
+/* nav */
+
+.nav{
+    display: grid;
+    grid-template-columns: 120px 1fr 220px;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+.nav-link{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    color: #273440;
+    cursor: pointer;
+}
+.nav-actions{
+    text-align: right;
+}
+
+.nav-actions button {
+    background-color: #1E2B38;
+    color: #f9f3ee;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 22px;
+    font-weight: 600;
+}
+
+.nav-actions span {
+    margin-left: 12px;
+    color: #273440;
+}
+
+/* hero */
+
+.hero{
+display: grid;
+grid-template-columns: 1.2fr 1fr;
+gap: 40px;
+padding: 40px 60px;
+
+}
+
+.hero-left{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.unlock{
+    font-size: 28px;
+    color: #273440;
+    font-weight: 900;
+
+}
+
+.title{
+    font-size: 60px;
+    line-height: 1.05;
+    position: relative;
+}
+.desc{
+    max-width: 440px;
+    color: #273440;
+}
+
+/* cards */
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    gap: 22px;
+    margin-top: 14px;
+
+}
+.card{
+    background-color: #d8d1cb;
+    border-top-left-radius: 40%;
+      border-top-right-radius: 40%;
+
+        border-bottom-left-radius: 6%;
+          border-bottom-right-radius: 6%;
+          padding-top: 18px;
+          text-align: center;
+          overflow: hidden;
+}
+
+.card h4 {
+    color: #1E2B38;
+}
+
+.card span{
+    font-size: 12px;
+    color: #273440;
+}
+.card strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+    min-height: 50px;
+      border-top-left-radius: 40%;
+        border-top-right-radius: 40%;
+        background-color: #fff;
+        color: #1E2B38;
+        
+}
+
+.card img {
+    width: 100px;
+    display: block;
+    margin: 0px auto 10px;
+}
+
+/* right */
+
+.hero-right{
+position: relative;
+height: 520px;
+}
+.stone{
+    position: absolute;
+    top: 40px;
+    left: 14%;
+    width: 230px;
+}
+
+.hand{
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+    width: 380px;
+    transform: rotate(10deg);
+    transform-origin: bottom left;
+}
+
+.start{
+    position: absolute;
+    top: 300px;
+    left: 3%;
+    background-color: #273440 ;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 32px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.barcode {
+    position: absolute;
+    bottom: 10px;
+    left: 35%;
+    background-color:#d8d1cb ;
+    padding: 10px 10px;
+    border-radius: 12px;
+}
+
+
+.barcode img {
+    width: 280px;
+}
+
+/* footer */
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding: 18px 60px;
+    text-align: center;
+    background: #c1bab8;
+    color: black;
+  font-weight: 600;
+    
+}
+
+.footer span img {
+    width: 16px;
+    height: auto;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+button{
+    cursor: pointer;
+}
+
+/* 
+Resposvie */
+
+@media (max-width :700px){
+    
+    .nav{
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+    }
+
+    .nav-link{
+        display: none;
+    }
+
+    .hero{
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+
+    .title{
+        font-size: 44px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2 ,1fr);
+    }
+    .hero-right{
+        width: 420px;
+        margin-top:30px ;
+    }
+    .hand{
+        width: 300px;
+        left: 20%;
+        bottom: 100px;
+    }
+    .start{
+        top: 210px;
+        left: 20%;
+    }
+    .footer{
+        grid-template-columns: repeat(2 ,1fr);
+    }
+}
+
+/* for small device  */
+
+@media (max-width :480px){
+    
+
+    .title{
+        font-size: 34px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .card{
+        width: 94%;
+        margin: auto;
+    }
+
+    .hero-right{
+        width: 360px;
+        
+    }
+  
+    .hand{
+        width: 200px;
+        left: 18%;
+        bottom: 100px;
+        transform: rotate(20deg);
+        transform-origin: bottom left;
+    }
+    .start{
+        top: 0px;
+        left: 35%;
+
+    }
+    .barcode{
+        display: none;
+    }
+
+    .barcode img {
+        display: none;
+    }
+    .footer{
+        grid-template-columns: 1fr;
+        font-size: small;
+        gap: 12px;
+    }
+}
+
+
+
+   /* HOVER EFFECTS */
+
+
+/* Buttons hover */
+button,
+.start {
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.start:hover {
+    transform: scale(1.08);
+    background-color: #1b2430;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Card hover */
+.card {
+    transition: all 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background-color: #e6dfd9;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+/* Card image hover */
+.card img {
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* Navbar links hover */
+.nav-link span,
+.nav-link a {
+    transition: all 0.3s ease;
+}
+
+.nav-link span:hover,
+.nav-link a:hover {
+    color: #1E2B38;
+    transform: scale(1.1);
+}
+
+/* Footer hover */
+.footer span {
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.footer span:hover {
+    color: #273440;
+    transform: scale(1.1);
+}
